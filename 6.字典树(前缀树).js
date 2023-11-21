@@ -4,52 +4,32 @@
  */
 
 
-var TreeNode = function () {
-  this.curVal = null;
-  this.parent = null;
-  this.childs = [];
-  return this;
+var Trie = function() {
+
 };
 
-var Trie = function () {
-// 共同的始祖节点，零级节点
-  this.trieTree = new TreeNode();
-  // 创建第一个一级节点（单字母）
-  this.trieTree.childs.push(new TreeNode());
-  this.curNode = this.trieTree.childs[0];
-  this.nextNode = null;
-};
-
-/**
+/** 
  * @param {string} word
  * @return {void}
  */
-Trie.prototype.insert = function (word) {
-  word.split().reduce((preVal = "", curVal) => {
-    const curStr = `${preVal}${curVal}`;
-    this.curNode.curVal = curStr;
-    this.curNode.childs.push(new TreeNode());
-    this.nextNode = this.curNode.childs.length-1;
-    this.nextNode.parent = this.curNode;
-    this.curNode = this.nextNode;
-  });
+Trie.prototype.insert = function(word) {
+
 };
 
-/**
+/** 
  * @param {string} word
  * @return {boolean}
  */
-Trie.prototype.search = function (word) {};
+Trie.prototype.search = function(word) {
 
-/**
+};
+
+/** 
  * @param {string} prefix
  * @return {boolean}
  */
-Trie.prototype.startsWith = function (prefix) {};
+Trie.prototype.startsWith = function(prefix) {
 
-
-Trie.prototype.print = function () {
-    this.trieTree
 };
 
 /**
